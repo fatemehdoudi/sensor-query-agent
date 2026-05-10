@@ -1,13 +1,14 @@
-Show gas readings in Area A
-Find vibration anomalies in Zone 2
-Show temperature sensors with values between 20 and 30
-How many anomalies are in Area B?
-What is the average temperature?
-Which location has the most anomalies?
-Show gas anomalies in Zone 1
-Show sensors with humidity above 60
-Find readings where wind speed is below 10
-Show readings that are not anomalies in Area A
-Show vibration readings in Zone 2 with value above 1000
-Show gas readings above 50 that are not anomalies
-Show all pressure readings
+Show gas anomalies in Area A and Area B with value between 50 and 80.
+#Show gas readings in Area A
+#Find vibration anomalies in Zone 2
+#Show temperature sensors with values between 20 and 30
+#How many anomalies are in Area B?
+#What is the average temperature?
+#Which location has the most anomalies?
+#Show gas anomalies in Zone 1
+#Show sensors with humidity above 60
+#Find readings where wind speed is below 10
+#Show readings that are not anomalies in Area A
+#Show vibration readings in Zone 2 with value above 1000
+#Show gas readings above 50 that are not anomalies
+#Show all pressure readings

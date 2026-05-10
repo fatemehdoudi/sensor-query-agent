@@ -17,9 +17,9 @@ def filter_records(
         previous_results = df.to_dict(orient="records")
 
 
-        
-
     if filter_type == "value_range":
+        if not isinstance(filter_value, dict):
+            return {"error": f"Invalid filter_value format for value_range: expected a dict with 'min'/'max' keys, got {type(filter_value).__name__} '{filter_value}'."}
         min_value = filter_value.get("min") if filter_value.get("min") is not None else float('-inf')
         max_value = filter_value.get("max") if filter_value.get("max") is not None else float('inf')
 
