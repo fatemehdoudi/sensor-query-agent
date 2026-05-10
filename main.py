@@ -52,10 +52,10 @@ async def main():
     with open("queries.txt", "r") as f:
         queries = [line.strip() for line in f if line.strip() and not line.startswith("#")]
 
-    # await run_config(base_agent, "base", queries)
-    await run_config(agent_config_a, "config_a", queries)
-    await run_config(agent_config_b, "config_b", queries)
-    await run_config(loop_agent_1, "loop_1", queries)
-    await run_config(loop_agent_5, "loop_5", queries)
+    await run_config(base_agent, "base", queries)
+    # await run_config(agent_config_a, "config_a", queries)
+    # await run_config(agent_config_b, "config_b", queries)
+    # await run_config(loop_agent_1, "loop_1", queries)
+    # await run_config(loop_agent_5, "loop_5", queries)
 
 asyncio.run(main())
