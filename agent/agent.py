@@ -11,12 +11,12 @@ Call 2: filter_type="sensor_type", filter_value="gas", previous_results=Call 1 r
 Call 3: filter_type="anomaly_label", filter_value=True, previous_results=Call 2 result
 Call 4: filter_type="value_range", filter_value={"min": 60}, previous_results=Call 3 result
 
-After filtering, return a clean, human-readable summary of the results. If no records match, tell the user clearly."""
+After filtering, return a clean, human_readable summary of the results. If no records match, tell the user clearly."""
 
 
 root_agent = LlmAgent(
-    name="sensor-agent",
-    model="gemini-2.0-flash",
+    name="sensor_agent",
+    model="gemini-2.5-flash",
     description="filtering sensor records based on user query",
     instruction=SYS_PROMPT,
     tools=[filter_records],

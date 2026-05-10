@@ -7,7 +7,7 @@ DATA_PATH = os.path.join(os.path.dirname(__file__), "..", "sensor_data.xlsx")
 
 def filter_records(
         filter_type: str,
-        filter_value: Union[str, float, dict],
+        filter_value: str,
         previous_results: Optional[List[dict]] = None
     ) -> List[dict]:
     

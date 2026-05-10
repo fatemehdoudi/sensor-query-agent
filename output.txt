@@ -1,0 +1,90 @@
+content=Content(
+  parts=[
+    Part(
+      function_call=FunctionCall(
+        args={
+          'filter_type': 'sensor_type',
+          'filter_value': 'pressure'
+        },
+        id='adk-83765a37-7349-4a63-9400-3d0c8bc1ce3e',
+        name='filter_records'
+      ),
+      thought_signature=b'\n\xfa\x03\x01\x0c9\xd6\xc7ti?@\xd7#\xa6\x88d*VQ\x83\xa6;\xf0\xa0\xae\xe6\xd4T{*C\xe4\x94\x87\x9f\x0e\x9f\xb9\x9e\x95\xeb\xf6\x87\x97\xde$A"~]5\xda\r\xbfT]\x917U\x06\xca}\\\xea& \xea\x11\xe1j\xdc\xe9\xd3wo\x85\xf8+b\x95\xad\x04#\x91\x1f\xf5d\x93f{\x9c\xd0\xd13N\x92...'
+    ),
+  ],
+  role='model'
+) grounding_metadata=None partial=None turn_complete=None finish_reason=<FinishReason.STOP: 'STOP'> error_code=None error_message=None interrupted=None custom_metadata=None usage_metadata=GenerateContentResponseUsageMetadata(
+  cache_tokens_details=[
+    ModalityTokenCount(
+      modality=<MediaModality.TEXT: 'TEXT'>,
+      token_count=8639
+    ),
+  ],
+  cached_content_token_count=8639,
+  candidates_token_count=26,
+  prompt_token_count=11258,
+  prompt_tokens_details=[
+    ModalityTokenCount(
+      modality=<MediaModality.TEXT: 'TEXT'>,
+      token_count=11258
+    ),
+  ],
+  thoughts_token_count=123,
+  total_token_count=11407
+) live_session_resumption_update=None input_transcription=None output_transcription=None invocation_id='e-a3a3acbb-fafd-463f-a0ec-a8579f1bcf8a' author='sensor_agent' actions=EventActions(skip_summarization=None, state_delta={}, artifact_delta={}, transfer_to_agent=None, escalate=None, requested_auth_configs={}, requested_tool_confirmations={}) long_running_tool_ids=set() branch=None id='6b2b6051-a046-44d9-85af-ea21933000da' timestamp=1778431815.573438
+
+content=Content(
+  parts=[
+    Part(
+      function_response=FunctionResponse(
+        id='adk-83765a37-7349-4a63-9400-3d0c8bc1ce3e',
+        name='filter_records',
+        response={
+          'result': [
+            {<... 6 items at Max depth ...>},
+            {<... 6 items at Max depth ...>},
+            {<... 6 items at Max depth ...>},
+            {<... 6 items at Max depth ...>},
+            {<... 6 items at Max depth ...>},
+            <... 1 more items ...>,
+          ]
+        }
+      )
+    ),
+  ],
+  role='user'
+) grounding_metadata=None partial=None turn_complete=None finish_reason=None error_code=None error_message=None interrupted=None custom_metadata=None usage_metadata=None live_session_resumption_update=None input_transcription=None output_transcription=None invocation_id='e-a3a3acbb-fafd-463f-a0ec-a8579f1bcf8a' author='sensor_agent' actions=EventActions(skip_summarization=None, state_delta={}, artifact_delta={}, transfer_to_agent=None, escalate=None, requested_auth_configs={}, requested_tool_confirmations={}) long_running_tool_ids=None branch=None id='bbce444e-6555-459d-a4ab-c4f1109e8471' timestamp=1778431817.032967
+
+content=Content(
+  parts=[
+    Part(
+      text="""Here are all the pressure readings:
+
+*   **Asset ID:** A-105, **Location:** Zone 1, **Timestamp:** 2026-04-01 14:00:00, **Value:** 120, **Anomaly:** No
+*   **Asset ID:** A-109, **Location:** Area A, **Timestamp:** 2026-04-02 11:45:00, **Value:** 140, **Anomaly:** Yes
+*   **Asset ID:** A-115, **Location:** Zone 1, **Timestamp:** 2026-04-03 10:00:00, **Value:** 110, **Anomaly:** No
+*   **Asset ID:** A-119, **Location:** Zone 1, **Timestamp:** 2026-04-03 15:00:00, **Value:** 135, **Anomaly:** Yes
+*   **Asset ID:** A-124, **Location:** Zone 2, **Timestamp:** 2026-04-04 12:00:00, **Value:** 145, **Anomaly:** Yes
+*   **Asset ID:** A-127, **Location:** Zone 1, **Timestamp:** 2026-04-04 16:00:00, **Value:** 125, **Anomaly:** No"""
+    ),
+  ],
+  role='model'
+) grounding_metadata=None partial=None turn_complete=None finish_reason=<FinishReason.STOP: 'STOP'> error_code=None error_message=None interrupted=None custom_metadata=None usage_metadata=GenerateContentResponseUsageMetadata(
+  cache_tokens_details=[
+    ModalityTokenCount(
+      modality=<MediaModality.TEXT: 'TEXT'>,
+      token_count=10467
+    ),
+  ],
+  cached_content_token_count=10467,
+  candidates_token_count=342,
+  prompt_token_count=11698,
+  prompt_tokens_details=[
+    ModalityTokenCount(
+      modality=<MediaModality.TEXT: 'TEXT'>,
+      token_count=11698
+    ),
+  ],
+  total_token_count=12040
+) live_session_resumption_update=None input_transcription=None output_transcription=None invocation_id='e-a3a3acbb-fafd-463f-a0ec-a8579f1bcf8a' author='sensor_agent' actions=EventActions(skip_summarization=None, state_delta={}, artifact_delta={}, transfer_to_agent=None, escalate=None, requested_auth_configs={}, requested_tool_confirmations={}) long_running_tool_ids=None branch=None id='c8029460-53a4-494e-bfa1-292419040221' timestamp=1778431817.035245
+
