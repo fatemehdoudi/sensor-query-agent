@@ -14,14 +14,16 @@ sensor-query-agent/
 │   ├── __init__.py
 │   ├── agent.py        # Agent definitions (base, config_a, config_b, loop_1, loop_5)
 │   └── tool.py         # filter_records tool
+├── logs/               # Output logs per configuration (generated at runtime)
+│   ├── output_base.txt
+│   ├── output_config_a.txt
+│   ├── output_config_b.txt
+│   ├── output_loop_1.txt
+│   └── output_loop_5.txt
 ├── main.py             # Entry point
 ├── queries.txt         # Test queries (use # for comments)
 ├── sensor_data.xlsx    # Dataset
-├── output_base.txt     # Output logs per configuration
-├── output_config_a.txt
-├── output_config_b.txt
-├── output_loop_1.txt
-├── output_loop_5.txt
+├── report.pdf          # Assignment report
 └── pixi.toml
 ```
 
@@ -55,7 +57,7 @@ pixi shell
 python main.py
 ```
 
-By default, `main.py` runs the **base agent** on all queries in `queries.txt`.
+By default, `main.py` runs the **base agent** on all queries in `queries.txt`. Output logs are saved to the `logs/` folder.
 
 To test other configurations (temperature variants, LoopAgent), uncomment the relevant lines in `main.py`:
 
@@ -66,8 +68,6 @@ await run_config(base_agent, "base", queries)
 # await run_config(loop_agent_1, "loop_1", queries)      # max_iterations=1
 # await run_config(loop_agent_5, "loop_5", queries)      # max_iterations=5
 ```
-
-Each configuration saves its full event log to a corresponding `output_<config>.txt` file.
 
 ## Adding Queries
 
@@ -94,3 +94,7 @@ The agent only handles filtering questions. Supported filters:
 - The tool applies exactly one filter per call — multi-condition queries are handled by chaining calls sequentially.
 - `filter_value` for `value_range` must be a dict with optional `min`/`max` keys. If the LLM passes an unexpected type, the tool returns a descriptive error without crashing.
 - The agent does not support OR-based location filtering natively — multi-location queries rely on emergent LLM behavior.
+
+## Report
+
+See `report.pdf` for a full discussion of agent architecture, tool design, example queries, failure cases, and execution control observations.
