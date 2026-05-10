@@ -23,7 +23,9 @@ sensor-query-agent/
 ├── main.py             # Entry point
 ├── queries.txt         # Test queries (use # for comments)
 ├── sensor_data.xlsx    # Dataset
-├── report.pdf          # Assignment report
+├── reports/         # Assignment report
+│   ├── report.pdf
+│   └── rl_design.pdf
 └── pixi.toml
 ```
 
